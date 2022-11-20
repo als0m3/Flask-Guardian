@@ -2,19 +2,23 @@ class Rules:
     def __init__(self):
         self.rules = dict()
 
-    def Required(self):
+    def isRequired(self):
         self.rules["required"] = True
         return self
 
-    def String(self):
+    def isString(self):
         self.rules["type"] = "string"
         return self
 
-    def Email(self):
+    def isBoolean(self):
+        self.rules["type"] = "boolean"
+        return self
+
+    def isEmail(self):
         self.rules["type"] = "email"
         return self
 
-    def Integer(self):
+    def isInteger(self):
         self.rules["type"] = "integer"
         return self
 
@@ -34,11 +38,11 @@ class Rules:
         self.rules["notcontains"] = value
         return self
 
-    def Equal(self, value):
+    def isEqual(self, value):
         self.rules["equal"] = value
         return self
 
-    def notEqual(self, value):
+    def isNotEqual(self, value):
         self.rules["notequal"] = value
         return self
 
