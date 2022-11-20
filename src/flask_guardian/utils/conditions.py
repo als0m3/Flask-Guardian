@@ -56,3 +56,5 @@ def type_param(title, rule, target):
         return error_must_be_int(title)
     if rule == "email" and not verify_email(target):
         return error_must_be_email(title)
+    if rule == "boolean" and type(target) is not bool:
+        return error_must_be_boolean(title)

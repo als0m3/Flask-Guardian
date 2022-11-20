@@ -14,6 +14,10 @@ def error_must_be_int(target):
     return {"error": "Invalid resource ['" + target + "'], must be an integer !"}, 400
 
 
+def error_must_be_boolean(target):
+    return {"error": "Invalid resource ['" + target + "'], must be a boolean !"}, 400
+
+
 def error_must_be_less_than(target, param):
     return {
         "error": "Invalid resource ['"
