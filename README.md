@@ -4,7 +4,9 @@
 
 ## About
 
-This Package is inspired by [Joi](https://joi.dev/)
+Chainable request-validation rules for Flask, inspired by [Joi](https://joi.dev/).
+
+This is an earlier library. Validate behavior against your Flask version before production use. The repository’s LICENSE file is currently empty; licensing needs clarification before redistribution.
 
 
 ## Installation
@@ -22,6 +24,7 @@ pip install flask-guardian
 ```py
 
 from flask_guardian.rules import Rules
+from flask_guardian.validator import Validator
 
 my_rules = {
   "login": Rules().Required().String().Max(20),
